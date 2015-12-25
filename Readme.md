@@ -52,6 +52,7 @@ according to your preferences.
 
 ### Miscellaneous
 * [Object.freeze, Object.preventExtensions, Object.seal, with, eval](#objectfreeze-objectpreventextensions-objectseal-with-eval)
+* [Always enable strict mode](#always-enable-strict-mode)
 * [Requires At Top](#requires-at-top)
 * [Getters and setters](#getters-and-setters)
 * [Do not extend built-in prototypes](#do-not-extend-built-in-prototypes)
@@ -243,7 +244,7 @@ keys when your interpreter complains:
 ```js
 var a = ['hello', 'world'];
 var b = {
-  good: 'code',
+  good          : 'code',
   'is generally': 'pretty',
 };
 ```
@@ -525,6 +526,10 @@ if (isSessionValid) {
 ### Object.freeze, Object.preventExtensions, Object.seal, with, eval
 
 Crazy shit that you will probably never need. Stay away from it.
+
+### Always enable strict mode
+
+Always put `use strict` at the top, before all code. This will ensures the code you are writing now is better prepared for tomorrow without deprecated features.
 
 ### Requires At Top
 
